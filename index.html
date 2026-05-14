@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>T20pl Cricket Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Welcome Screen -->
+  <div class="welcome-screen" id="welcomeScreen">
+    <h1>T20pl</h1>
+    <p>Ultimate Cricket Experience</p>
+
+    <div class="menu-buttons">
+      <button onclick="startGame()">Quick Match</button>
+      <button onclick="showLiveScores()">Live Scores</button>
+      <button onclick="showMultiplayer()">Multiplayer</button>
+      <button onclick="toggleTheme()">Day/Night</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h2>🏏 T20pl Stadium</h2>
+
+    <div class="scoreboard">
+      <span id="score">0</span>/<span id="wickets">0</span>
+      <small>(<span id="overs">0.0</span>)</small>
+    </div>
+  </header>
+
+  <!-- Commentary -->
+  <div class="commentary-box" id="commentary">
+    Welcome to T20pl!
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button onclick="playShot()">Play Shot</button>
+    <button onclick="changeLanguage()">Change Commentary</button>
+  </div>
+
+  <!-- Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Live Scores -->
+  <div class="popup" id="liveScores">
+    <h2>Live Scores</h2>
+
+    <div class="match-card">
+      <h3>Hyderabad Flames vs Chennai Kingsmen</h3>
+      <p>154/5 (18.2)</p>
+      <p>Need 12 runs in 8 balls</p>
+    </div>
+
+    <div class="match-card">
+      <h3>Mumbai Tigers vs Bangalore Rockets</h3>
+      <p>178/7 (20)</p>
+      <p>Mumbai Tigers won by 11 runs</p>
+    </div>
+
+    <button onclick="closePopup('liveScores')">Close</button>
+  </div>
+
+  <!-- Multiplayer -->
+  <div class="popup" id="multiplayer">
+    <h2>Multiplayer</h2>
+
+    <button>Create Room</button>
+    <button>Join Room</button>
+
+    <button onclick="closePopup('multiplayer')">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
